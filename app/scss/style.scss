@@ -2,6 +2,8 @@
 @import 'global';
 @import 'fonts';
 
+// start header
+
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -56,13 +58,16 @@
     }
 
     a {
-        font-family: 'Roboto', sans-serif;
+        font-family: $roboto;
         font-weight: 500;
         color: #fff;
         font-size: 14px;
         line-height: 30px;
     }
 }
+
+// end header
+// start search
 
 .search {
     background-repeat: no-repeat;
@@ -84,7 +89,7 @@
     }
 
     &-text {
-        font-family: 'Roboto', sans-serif;
+        font-family: $roboto;
         margin-bottom: 50px;
         font-size: 20px;
         line-height: 30px;
@@ -108,7 +113,7 @@
             padding: 0 60px 0 25px;
 
             &::placeholder {
-                font-family: 'Roboto', sans-serif;
+                font-family: $roboto;
                 color: #90a4ae;
             }
         }
@@ -124,3 +129,153 @@
 
 
 }
+
+// end search
+// start products
+.products {
+    padding: 110px 0;
+    background-color: $grey;
+}
+
+.products__inner-btn {
+    text-align: center;
+    margin-bottom: 60px;
+
+    button {
+        padding: 12px 21px;
+        border: none;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        outline: none;
+
+        &+button {
+            margin-left: 5px;
+        }
+
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+
+        }
+    }
+}
+
+.products__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products__item {
+    max-width: 442px;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    margin-bottom: 30px;
+
+    &-img {
+        display: block;
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        align-items: center;
+        min-height: 90px;
+        font-family: $roboto;
+        font-weight: 500;
+        border-bottom: 1px solid #e7ecf2;
+        background-color: #fff;
+    }
+
+    &-name {
+        max-width: 310px;
+    }
+
+    &-title {
+        display: block;
+        font-size: 18px;
+        color: $bg;
+    }
+
+    &-category {
+        display: block;
+        font-size: 14px;
+        color: $green;
+    }
+
+    &-price {
+        font-family: $roboto;
+        font-weight: 700;
+        font-size: 20px;
+        color: $bg;
+    }
+
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding: 10px 30px;
+        background-color: #fff;
+    }
+
+    &-author {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+            margin-right: 14px;
+        }
+
+        span {
+            font-size: 14px;
+            font-family: $roboto;
+            font-weight: 500;
+        }
+    }
+
+}
+
+.products__bottom-btn {
+    text-align: center;
+    margin-top: 45px;
+    font-size: 16px;
+
+    button {
+        padding: 20px 30px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+        color: $bg;
+        cursor: pointer;
+        outline: none;
+
+        &+button {
+            margin-left: 10px;
+        }
+
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+// end products
